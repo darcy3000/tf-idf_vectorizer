@@ -1,0 +1,53 @@
+****************VECTOR SPACE MODEL*********************
+
+Preprocessing:
+	Read the documents from corpus.
+	Removed the punctuations.
+	Tokenised using tokenizer of nltk.
+	Stemmed the words using Porter Stemmer.
+	Stored everything in list of list .
+
+Calculating Tf-Idf:
+	Term frequency:
+		Iterating through the document and counting the frequency(tf).
+		Scaling it down to 1+log(tf).
+
+	Inverse Document Frequency:
+		Created an ordered dictionary.
+		Iterated through all the tokens in the corpus and checked in how many documents it is occuring(idf).
+		Returning 1+log((size of corpus)/idf)
+
+	Multiplying tf with idf in (size of corpus)X(tokens in the corpus)
+
+Calculating Cosine similarity:
+	Preprocessing the magnitudes of each document as a vector.
+	Taking the dot product of query with the document after projecting query in the n-dimensional vector space.
+	Optimisation:
+		Since the the query vector is sparse we do not need to multiply the entire vector for taking the dot product. We just need to multiply with the non zero entries.
+
+Data Structures used:
+	Ordered Dictionary: for storing the idf
+	max_heap: For retrieving the top 10 results
+	set: for storing unique stemmed words
+
+
+Time taken for various things:
+	Preprocessing ~50 secs
+	Querying ~ order of 10^(-2) secs
+
+Implementation Details:
+	Writing the classifier into pickle files for storing the objects persistently. Reading from the files for subsequent runs for reducing the preprocessing time.
+
+	GUI Based environment:
+		Used kivy module for creating front end user experience.
+
+OUT OF THE BOX:
+	1)Implemented Autocomplete which is based on search history and our created lexicon.
+
+	2)Gave more importance to word if there is direct match even if two words have the same stem and the other word has a better tfidf score. 
+
+TEAM MEMBERS:
+	2015A7PS0080H - NAVNEET KUMAR
+	2015A7PS0107H - RAJAT BISWAS
+	2015A7PS0111H - ABHIJEET BAJAJ
+	2015A7PS0160H - RAUNAK RITESH

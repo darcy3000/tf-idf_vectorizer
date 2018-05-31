@@ -1,0 +1,272 @@
+<MyTextInput>:
+    multiline:False
+    use_bubble:False
+
+<ScrollableLabel>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: './ana.jpg'
+    ll1:
+    ll2:
+    ll3:
+    ll4:
+    ll5:
+    ll6:
+    ll7:
+    ll8:
+    ll9:
+    ll10:
+    GridLayout:
+        id:layout
+        cols: 1
+        size_hint_y: None
+        height: self.minimum_height
+        padding:[40,30]
+        spacing:20
+
+        MyTextInput:
+            id: search
+            multiline:False
+            font_size: 25
+            size_hint:[0.6,None]
+            pos_hint:{'top': 0.9}
+            height:45
+            hint_text:'Enter your query'
+            use_bubble:False
+            #text:root.on_text()
+
+        Button:
+            text: 'Search'
+            font_size: 25
+            pos:40,40
+            size_hint:[0.5,None]
+            width: root.width*0.6
+            pos_hint:{'top': 0.9}
+            height:45
+            on_release: root.queryResult()
+        Label:
+            id:status
+            text:''
+            font_size:25
+            size_hint:[1,None]
+            height: self.texture_size[1]
+            markup:True
+        Label:
+            text: ''
+            font_size: 15
+            text_size: self.width, None
+            size_hint_y: None
+            halign: 'center'
+            height: self.texture_size[1]
+        Button:
+            id:b1
+            text: ''
+            pos:40,40
+            font_size: 18
+            size_hint:[0.5,None]
+            pos_hint:{'top': 0.9}
+            background_color:[1,1,1,0]
+            color:[1,1,0,1]
+            on_release: root.bPress1()
+        Label:
+            id:l1
+            text: root.ll1
+            markup: True
+            text_size: self.width*0.6, None
+            size_hint_y: None
+            halign: 'left'
+            font_size: 16
+            line_height: 1.8
+            color: [0.5,0.5,1,1] 
+            height: self.texture_size[1]
+        Button:
+            id:b2
+            text: ''
+            pos:40,40
+            font_size: 18
+            size_hint:[0.5,None]
+            pos_hint:{'top': 0.9}
+            background_color:[1,1,1,0]
+            color:[1,1,0,1]
+            on_release: root.bPress2()
+        Label:
+            id:l2
+            text: root.ll2
+            markup: True
+            text_size: self.width*0.6, None
+            size_hint_y: None
+            halign: 'left'
+            font_size: 16
+            line_height: 1.8
+            color: [0.5,0.5,1,1] 
+            height: self.texture_size[1]
+        Button:
+            id:b3
+            text: ''
+            pos:40,40
+            font_size: 18
+            size_hint:[0.5,None]
+            pos_hint:{'top': 0.9}
+            background_color:[1,1,1,0]
+            color:[1,1,0,1]
+            on_release: root.bPress3()
+        Label:
+            id:l3
+            text: root.ll3
+            markup: True
+            text_size: self.width*0.6, None
+            size_hint_y: None
+            halign: 'left'
+            font_size: 16
+            line_height: 1.8
+            color: [0.5,0.5,1,1] 
+            height: self.texture_size[1]
+        Button:
+            id:b4
+            text: ''
+            pos:40,40
+            font_size: 18
+            size_hint:[0.5,None]
+            pos_hint:{'top': 0.9}
+            background_color:[1,1,1,0]
+            color:[1,1,0,1]
+            on_release: root.bPress4()
+        Label:
+            id:l4
+            text: root.ll4
+            markup: True
+            text_size: self.width*0.6, None
+            size_hint_y: None
+            halign: 'left'
+            font_size: 16
+            line_height: 1.8
+            color: [0.5,0.5,1,1] 
+            height: self.texture_size[1]
+        Button:
+            id:b5
+            text: ''
+            pos:40,40
+            font_size: 18
+            size_hint:[0.5,None]
+            pos_hint:{'top': 0.9}
+            background_color:[1,1,1,0]
+            color:[1,1,0,1]
+            on_release: root.bPress5()
+        Label:
+            id:l5
+            text: root.ll5
+            markup: True
+            text_size: self.width*0.6, None
+            size_hint_y: None
+            halign: 'left'
+            font_size: 16
+            line_height: 1.8
+            color: [0.5,0.5,1,1] 
+            height: self.texture_size[1]
+        Button:
+            id:b6
+            text: ''
+            pos:40,40
+            font_size: 18
+            size_hint:[0.5,None]
+            pos_hint:{'top': 0.9}
+            background_color:[1,1,1,0]
+            color:[1,1,0,1]
+            on_release: root.bPress6()
+        Label:
+            id:l6
+            text: root.ll6
+            markup: True
+            text_size: self.width*0.6, None
+            size_hint_y: None
+            halign: 'left'
+            font_size: 16
+            line_height: 1.8
+            color: [0.5,0.5,1,1] 
+            height: self.texture_size[1]
+        Button:
+            id:b7
+            text: ''
+            pos:40,40
+            font_size: 18
+            size_hint:[0.5,None]
+            pos_hint:{'top': 0.9}
+            background_color:[1,1,1,0]
+            color:[1,1,0,1]
+            on_release: root.bPress7()
+        Label:
+            id:l7
+            text: root.ll7
+            markup: True
+            text_size: self.width*0.6, None
+            size_hint_y: None
+            halign: 'left'
+            font_size: 16
+            line_height: 1.8
+            color: [0.5,0.5,1,1] 
+            height: self.texture_size[1]
+        Button:
+            id:b8
+            text: ''
+            pos:40,40
+            font_size: 18
+            size_hint:[0.5,None]
+            pos_hint:{'top': 0.9}
+            background_color:[1,1,1,0]
+            color:[1,1,0,1]
+            on_release: root.bPress8()
+        Label:
+            id:l8
+            text: root.ll8
+            markup: True
+            text_size: self.width*0.6, None
+            size_hint_y: None
+            halign: 'left'
+            font_size: 16
+            line_height: 1.8
+            color: [0.5,0.5,1,1] 
+            height: self.texture_size[1]
+        Button:
+            id:b9
+            text: ''
+            pos:40,40
+            font_size: 18
+            size_hint:[0.5,None]
+            pos_hint:{'top': 0.9}
+            background_color:[1,1,1,0]
+            color:[1,1,0,1]
+            on_release: root.bPress9()
+        Label:
+            id:l9
+            text: root.ll9
+            markup: True
+            text_size: self.width*0.6, None
+            size_hint_y: None
+            halign: 'left'
+            font_size: 16
+            line_height: 1.8
+            color: [0.5,0.5,1,1] 
+            height: self.texture_size[1]
+        Button:
+            id:b10
+            text: ''
+            pos:40,40
+            font_size: 18
+            size_hint:[0.5,None]
+            pos_hint:{'top': 0.9}
+            background_color:[1,1,1,0]
+            color:[1,1,0,1]
+            on_release: root.bPress10()
+        Label:
+            id:l10
+            text: root.ll10
+            markup: True
+            text_size: self.width*0.6, None
+            size_hint_y: None
+            halign: 'left'
+            font_size: 16
+            line_height: 1.8
+            color: [0.5,0.5,1,1] 
+            height: self.texture_size[1]
